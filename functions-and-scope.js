@@ -1,28 +1,26 @@
-// Je gaat functies schrijven die we kunnen hergebruiken om een lijst met eindcijfers van studenten te checken. Je zult over de cijfers heen moeten itereren (hoe pak je dat aan?),
-// maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
-// Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
-const cumLaudeStudents = "";
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
-
-for (let i = 0; i < grades.length; i++){
-    if(i >= 8) {
-        console.log()
-    }
-}
-
-/* Opdracht  1: Cum Laude */
-
 /* 1a: Script schrijven  */
 // De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger). Daar moeten namelijk speciale diploma's voor besteld worden.
 // Schrijf de stapjes om dit te kunnen checken eerst uit en vraag jezelf de volgende dingen af:
-// 1. Mach erst ein for-loop vom array inclusive eines if-else statements.
-// 2. Ich brauche eine const um alles abzuspeichern - hier const cumLaude students.
-// 3. Wie kombiniere ich das jetzt in einer Funktion ???
+
 
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden? Wo kann ich das abspreichern ??? CumLaude Students ???
-// Log het antwoord in de terminal.
+// Log het antwoord in de terminal.// Je gaat functies schrijven die we kunnen hergebruiken om een lijst met eindcijfers van studenten te checken. Je zult over de cijfers heen moeten itereren (hoe pak je dat aan?),
+// maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
+// Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
 
-// ---- Verwachte uitkomst: 6
+const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+let cumLaudeStudents = 0;
+for (let i = 0; i < grades.length; i++){
+    if(i >= 8) {
+        cumLaudeStudents = grades[i]
+    }
+}
+console.log(cumLaudeStudents)
+/* Opdracht  1: Cum Laude */
+
+
+
+// ---- Verwachte uitkomst: 6 //check
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
