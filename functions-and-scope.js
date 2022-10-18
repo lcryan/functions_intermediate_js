@@ -33,11 +33,13 @@ function cumLaude (arrayOfGrades){
     let cumLaudeStudents= 0;
     for (let i = 0; i < arrayOfGrades.length; i++){
         if(arrayOfGrades[i] >= 8) {
-            cumLaudeStudents = cumLaudeStudents+1; // check warum das hier funktioniert ?>
+
+            cumLaudeStudents = cumLaudeStudents + 1;
         }
     }
     return cumLaudeStudents;
 }
+console.log(cumLaude(grades))
 console.log(cumLaude(array1));
 console.log(cumLaude(array2));
 
