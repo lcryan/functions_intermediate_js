@@ -1,24 +1,22 @@
+/* Opdracht  1: Cum Laude *
 /* 1a: Script schrijven  */
-// De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger). Daar moeten namelijk speciale diploma's voor besteld worden.
+// De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger).
+// Daar moeten namelijk speciale diploma's voor besteld worden.
 // Schrijf de stapjes om dit te kunnen checken eerst uit en vraag jezelf de volgende dingen af:
+// * Hoe kan ik iedere waarde van de array checken op deze conditie?
+// * Hoe zorg ik ervoor dat dit ook werkt wanneer de array 100 entries bevat?
+// * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet,
+// ik dit ergens kan bijhouden?
+// Log het antwoord in de terminal.
 
-
-// * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden? Wo kann ich das abspreichern ??? CumLaude Students ???
-// Log het antwoord in de terminal.// Je gaat functies schrijven die we kunnen hergebruiken om een lijst met eindcijfers van studenten te checken. Je zult over de cijfers heen moeten itereren (hoe pak je dat aan?),
-// maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
-// Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
-
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
-let cumLaudeStudents = 0;
-for (let i = 0; i < grades.length; i++){
-    if(i >= 8) {
-        cumLaudeStudents = grades[i]
-    }
-}
-console.log(cumLaudeStudents)
-/* Opdracht  1: Cum Laude */
-
-
+// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+// let cumLaudeStudents = 0;
+// for (let i = 0; i < grades.length; i++){
+//     if(i >= 8) {
+//         cumLaudeStudents = grades[i]
+//     }
+// }
+// console.log(cumLaudeStudents);
 
 // ---- Verwachte uitkomst: 6 //check
 
@@ -27,6 +25,17 @@ console.log(cumLaudeStudents)
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+const x = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+let generalStudents = 0;
+const cumLaude = function (array) {
+    for (let i = 0; i < x.length; i++){
+        if(i >= 8) {
+            generalStudents = array[x]
+            return generalStudents
+        }
+    }
+}
+console.log(cumLaude(generalStudents))
 
 // ---- Verwachte uitkomsten:
 // cumLaude(grades) geeft 6
