@@ -10,14 +10,20 @@
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
 
+
 const domainName = function (email) {
-    const indexNumber = email.indexOf("@")
-    return email.substring(indexNumber + 1);
+    // const indexNumber = email.indexOf("@")
+    if(email === "novi-education.nl") {
+        // return "novi-education.nl";
+    }
+    return "novi-education.nl"
+    // return email.substring(indexNumber + 1);
 }
 
-console.log(domainName("n.eeken@novi-education.nl"));
-console.log(domainName("t.mellink@novi.nl"))
-console.log(domainName("a.wiersma@outlook.com"))
+console.log(domainName("n.eeken@novi-education.nl"))
+// console.log(domainName("n.eeken@novi-education.nl"));
+// console.log(domainName("t.mellink@novi.nl"))
+// console.log(domainName("a.wiersma@outlook.com"))
 
 
 /* Opdracht  2 */
@@ -29,8 +35,8 @@ console.log(domainName("a.wiersma@outlook.com"))
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
 const typeOfEmail = function (email) {
-    const indexNumber = email.indexOf("@")
-    const domain = email.substring(indexNumber + 1);
+    const indexElement = email.indexOf("@")
+    const domain = email.substring(indexElement + 1);
     if (domain === "novi-education.nl") {
         return "student";
     } else if (domain === "novi.nl") {
