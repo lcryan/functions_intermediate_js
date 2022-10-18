@@ -9,33 +9,38 @@
 // ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
-// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
-// let cumLaudeStudents = 0;
-// for (let i = 0; i < grades.length; i++){
-//     if(i >= 8) {
-//         cumLaudeStudents = grades[i]
-//     }
-// }
-// console.log(cumLaudeStudents);
+const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+let cumLaudeStudents = 0;
+for (let i = 0; i < grades.length; i++){
+    if(i >= 8) {
+        cumLaudeStudents = grades[i]
+    }
+}
+console.log(cumLaudeStudents);
 
-// ---- Verwachte uitkomst: 6 //check
+// ---- Verwachte uitkomst: 6 //check-done
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
-const x = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
-let generalStudents = 0;
-const cumLaude = function (array) {
-    for (let i = 0; i < x.length; i++){
-        if(i >= 8) {
-            generalStudents = array[x]
-            return generalStudents
+
+let array1 = [6, 4, 5];
+let array2 = [8, 9, 4, 6, 10];
+
+function cumLaude (arrayOfGrades){
+    let cumLaudeStudents= 0;
+    for (let i = 0; i < arrayOfGrades.length; i++){
+        if(arrayOfGrades[i] >= 8) {
+            cumLaudeStudents = cumLaudeStudents+1; // check warum das hier funktioniert ?>
         }
     }
+    return cumLaudeStudents;
 }
-console.log(cumLaude(generalStudents))
+console.log(cumLaude(array1));
+console.log(cumLaude(array2));
+
 
 // ---- Verwachte uitkomsten:
 // cumLaude(grades) geeft 6
