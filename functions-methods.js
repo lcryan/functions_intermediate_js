@@ -10,11 +10,9 @@
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
 
-
-
 const domainName = function (email) {
     const indexNumber = email.indexOf("@")
-        return email.substring(indexNumber + 1);
+    return email.substring(indexNumber + 1);
 }
 
 console.log(domainName("n.eeken@novi-education.nl"));
@@ -32,14 +30,12 @@ console.log(domainName("a.wiersma@outlook.com"))
 
 const typeOfEmail = function (email) {
     const indexNumber = email.indexOf("@")
-    const domain = email.substring(indexNumber+ 1);
-    if(domain === "novi-education.nl"){
+    const domain = email.substring(indexNumber + 1);
+    if (domain === "novi-education.nl") {
         return "student";
-    }
-    else if(domain === "novi.nl"){
+    } else if (domain === "novi.nl") {
         return "medewerker"
-    }
-    else if(domain === "outlook.com") {
+    } else if (domain === "outlook.com") {
         return "extern"
     }
 };
@@ -66,10 +62,9 @@ const checkEmailValidity = function (emailadres) {
     const condition1 = emailadres.includes("@");
     const condition2 = emailadres.includes(",");
     const condition3 = emailadres.endsWith(".");
-    if (emailadres && condition1 && !condition2 && !condition3){
+    if (emailadres && condition1 && !condition2 && !condition3) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }
