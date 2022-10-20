@@ -117,13 +117,23 @@ console.log(decimalValue)
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
 
+//1. Wir brauchen zum Durchlaufen aller Nummern im Array einen for-loop
+//2. Die gesuchte Nummer (welche ist die hoechste Nummer im Array) muss groesser sein als alle Nummern im Array: if else statement
+//3. Wir muessen das Ergenis in einer variablen speichern, die wir vor der Funktion abspeichern, um spaeter im console.log darauf zugreifen zu koennen.
 
+const grades3 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6]
+let topGrade = 0;
 
+function highestGrade() {
+    for (let i = 0; i < grades3.length; i++) {
+        if (grades3[i] > topGrade) {
+            topGrade = grades3[i];
+        }
+    }
+    return topGrade
+}
 
-
-
-
-
+console.log(highestGrade(topGrade))
 // ---- Verwachte uitkomst: 9
 
 
@@ -136,3 +146,11 @@ console.log(decimalValue)
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+const grades31 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6]
+let topGrade31 = 0;
+for (let i = 0; i < grades31.length; i++) {
+    if (grades31[i] > topGrade31) {
+        topGrade31 = grades31[i];
+    }
+}
+console.log(topGrade31)
