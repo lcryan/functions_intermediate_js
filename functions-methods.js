@@ -1,7 +1,3 @@
-// Je gaat functies schrijven die we kunnen hergebruiken om sommige emailadressen te checken. Nu zul je gaan merken hoe handig functies kunnen zijn!
-// Je zult hier methoden van het String Object voor nodig hebben, dus pak de paragraaf op EdHub over het String Object er even bij.
-
-
 /* Opdracht  1 */
 // Schrijf een functie genaamd getEmailDomain, die een emailadres verwacht en de domeinnaam teruggeeft. Een domeinnaam is hetgeen dat na het @ in het adres staat
 // ---- Verwachte uitkomsten:
@@ -34,8 +30,8 @@ const typeOfEmail = function (email) {
         return "student";
     } else if (email.includes("@novi.nl")) {
         return "medewerker"
-    } else if (domain === "outlook.com") {
-        return "extern"
+    } else if (email.includes("outlook.com"))
+    { return "extern"
     }
 };
 
@@ -61,11 +57,7 @@ const checkEmailValidity = function (emailadres) {
     const condition1 = emailadres.includes("@");
     const condition2 = emailadres.includes(",");
     const condition3 = emailadres.endsWith(".");
-    if (emailadres && condition1 && !condition2 && !condition3) {
-        return true;
-    } else {
-        return false;
-    }
+    return !!(emailadres && condition1 && !condition2 && !condition3);
 }
 
 console.log(checkEmailValidity("n.eeken@novi.nl"));
