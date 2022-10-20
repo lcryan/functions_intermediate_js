@@ -62,6 +62,8 @@ console.log(cumLaude(array2));
 // Log het antwoord in de terminal.
 
 const grades2 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+const grades22 = [6, 4, 5];
+const grades23 = [8, 9, 4, 6, 10];
 let sum = 0;
 
 for (let i = 0; i < grades2.length; i++) {
@@ -90,7 +92,7 @@ let averageGrades = 0;
 function arrayOfGrades() {
     let sum = 0;
     for (let i = 0; i < grades2.length; i++) {
-        sum += grades2[i]
+        sum += grades2[i] // zie boven let uit 2a.
         averageGrades = sum / grades2.length
     }
     return averageGrades
@@ -114,6 +116,13 @@ console.log(decimalValue)
 // * Op welke conditie moet ik checken?
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
+
+
+
+
+
+
+
 
 // ---- Verwachte uitkomst: 9
 
