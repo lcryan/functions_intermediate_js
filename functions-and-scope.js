@@ -8,7 +8,7 @@
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet,
 // ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
-
+//
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 let cumLaudeStudents = 0;
 for (let i = 0; i < grades.length; i++){
@@ -34,7 +34,7 @@ function cumLaude (arrayOfGrades){
     for (let i = 0; i < arrayOfGrades.length; i++){
         if(arrayOfGrades[i] >= 8) {
 
-            cumLaudeStudents = cumLaudeStudents + 1;
+            cumLaudeStudents = cumLaudeStudents +1;
         }
     }
     return cumLaudeStudents;
@@ -50,8 +50,6 @@ console.log(cumLaude(array2));
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
 
-
-
 /* Opdracht  2: Gemiddeld cijfer */
 
 /* 2a: Script schrijven  */
@@ -61,6 +59,17 @@ console.log(cumLaude(array2));
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
+
+const grades2 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+let sum = 0;
+
+for (let i = 0; i < grades2.length; i++) {
+    sum += grades2[i]
+}
+
+let average = sum / grades2.length
+console.log(average)
+
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
@@ -79,8 +88,6 @@ console.log(cumLaude(array2));
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
-
 
 
 /* Bonusopdracht: hoogste cijfer */
