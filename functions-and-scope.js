@@ -11,8 +11,8 @@
 //
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 let cumLaudeStudents = 0;
-for (let i = 0; i < grades.length; i++){
-    if(i >= 8) {
+for (let i = 0; i < grades.length; i++) {
+    if (i >= 8) {
         cumLaudeStudents = grades[i]
     }
 }
@@ -29,16 +29,17 @@ console.log(cumLaudeStudents);
 let array1 = [6, 4, 5];
 let array2 = [8, 9, 4, 6, 10];
 
-function cumLaude (arrayOfGrades){
-    let cumLaudeStudents= 0;
-    for (let i = 0; i < arrayOfGrades.length; i++){
-        if(arrayOfGrades[i] >= 8) {
+function cumLaude(arrayOfGrades) {
+    let cumLaudeStudents = 0;
+    for (let i = 0; i < arrayOfGrades.length; i++) {
+        if (arrayOfGrades[i] >= 8) {
 
-            cumLaudeStudents = cumLaudeStudents +1;
+            cumLaudeStudents = cumLaudeStudents + 1;
         }
     }
     return cumLaudeStudents;
 }
+
 console.log(cumLaude(grades))
 console.log(cumLaude(array1));
 console.log(cumLaude(array2));
@@ -84,11 +85,26 @@ console.log(average)
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+let averageGrades = 0;
+
+function arrayOfGrades() {
+    let sum = 0;
+    for (let i = 0; i < grades2.length; i++) {
+        sum += grades2[i]
+        averageGrades = sum / grades2.length
+    }
+    return averageGrades
+}
+
+console.log(arrayOfGrades())
+
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
+let decimalValue = arrayOfGrades().toFixed(2)
+console.log(decimalValue)
 
 /* Bonusopdracht: hoogste cijfer */
 
