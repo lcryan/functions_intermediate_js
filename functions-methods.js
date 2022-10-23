@@ -6,7 +6,6 @@
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
 
-
 const getEmailDomain = function (email) {
     const indexSearchElement = email.indexOf("@")
     return email.substring(indexSearchElement);
@@ -30,8 +29,8 @@ const typeOfEmail = function (email) {
         return "student";
     } else if (email.includes("@novi.nl")) {
         return "medewerker"
-    } else if (email.includes("outlook.com"))
-    { return "extern"
+    } else if (email.includes("outlook.com")) {
+        return "extern"
     }
 };
 

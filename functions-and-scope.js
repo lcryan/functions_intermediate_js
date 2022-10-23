@@ -146,6 +146,7 @@ console.log(highestGrade(topGrade))
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
 const grades31 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6]
 let topGrade31 = 0;
 for (let i = 0; i < grades31.length; i++) {
